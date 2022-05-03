@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-color: lightgrey !important;
+}
+.main-container {
+  margin: 50px;
+}
+.min-height-600 {
+  min-height: 600px;
+}
+.no-flex-wrap {
+  flex-wrap: inherit !important;
+}
+.background-grey {
+  background-color: lightgrey !important;
+}
+.border-none {
+  border: none !important;
+}
+.min-height-80 {
+  min-height: 200px;
+}
