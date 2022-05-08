@@ -1,1 +1,28 @@
-<p>menu works!</p>
+<div class="accordion" id="accordionExample">
+  <div class="card" *ngFor="let menu of menuProperties">
+    <h2 class="accordion-header" [id]="'titre' + menu.id">
+      <button
+        class="accordion-button"
+        [ngClass]="{ collapsed: menu.id != '1' }"
+        type="button"
+        data-bs-toggle="collapse"
+        [attr.aria-expanded]="menu.id == '1' ? true : false"
+        [attr.data-bs-target]="'#' + menu.id"
+        [attr.aria-controls]="menu.id"
+      >
+        {{ menu.titre }}
+      </button>
+    </h2>
+
+    <div
+      [id]="menu.id"
+      [ngClass]="{ show: menu.id == '1' }"
+      class="accordion-collapse collapse"
+      [attr.aria-labelledby]="'titre' + menu.id"
+      data-bs-parent="#accordionExample"
+      *ngFor="let sousMenu of menu.sousMenu"
+    >
+      <div class="accordion-body">{{ sousMenu.titre }}</div>
+    </div>
+  </div>
+</div>

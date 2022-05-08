@@ -90,7 +90,7 @@ export class MenuComponent implements OnInit {
     },
     {
       id: '5',
-      titre: 'Paramétrages',
+      titre: 'Paramètres',
       icon: '',
       url: '',
       sousMenu: [
